@@ -1,0 +1,4 @@
+include gitTogether/schema.sql
+graft gitTogether/static
+graft gitTogether/templates
+global-exclude *.pyc
