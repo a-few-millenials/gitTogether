@@ -18,26 +18,20 @@ def create_app(test_config=None):
     else:
 	    # load the test config if passed in
 	    app.config.update(test_config)
-		
+
     # ensure the instance folder exists
     try:
 	    os.makedirs(app.instance_path)
     except OSError:
 	    pass
-    
+
     # register the database commands
     from . import db
     db.init_app(app)
-    
+
     from . import test
+    from gitTogether.home.routes import home
     app.register_blueprint(test.bp)
-	
-    """import gitTogether.views"""
-    """
-        Try and resolve issue with importing views from views.py
-    """
-    @app.route('/')
-    def index():
-        return 'Hello, World!'
-		
+    app.register_blueprint(home)
+
     return app
