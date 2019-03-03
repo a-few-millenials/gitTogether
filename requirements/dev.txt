@@ -5,3 +5,4 @@
 
 # And Development
 pytest
+factory_boy
