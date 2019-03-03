@@ -31,7 +31,9 @@ def create_app(test_config=None):
 
     from . import test
     from gitTogether.home.routes import home
+    from gitTogether.user.routes import user
     app.register_blueprint(test.bp)
     app.register_blueprint(home)
+    app.register_blueprint(user)
 
     return app
