@@ -1,8 +1,0 @@
-# Everything needed for Development
-
-# Everything in Production
--r prod.txt
-
-# And Development
-pytest
-factory_boy

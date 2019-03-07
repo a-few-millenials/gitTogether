@@ -1,4 +1,0 @@
-# Everything needed in Production
-
-Flask
-click
